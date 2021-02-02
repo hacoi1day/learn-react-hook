@@ -12,7 +12,7 @@ function randomColor(currentColor) {
     newIndex = Math.trunc(Math.random() * 3);
   }
 
-  console.log(COLOR_LIST[newIndex]);
+  // console.log(COLOR_LIST[newIndex]);
   return COLOR_LIST[newIndex];
 }
 

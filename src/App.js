@@ -6,6 +6,9 @@ import TodoForm from "./components/TodoForm";
 import PostList from "./components/PostList";
 import Pagination from "./components/Pagination";
 import PostFilterForm from "./components/PostFilterForm";
+import Clock from "./components/Clock";
+import BetterClock from "./components/BetterClock";
+import MagicBox from "./components/MagicBox";
 
 
 function App() {
@@ -87,6 +90,9 @@ function App() {
     });
   }
 
+  // Clock
+  const [showClock, setShowClock] = useState(true);
+
 
   return (
     <div className="app">
@@ -102,6 +108,14 @@ function App() {
         pagination={pagination}
         onPageChange={handlePageChange}
       />
+
+      <hr/>
+      { showClock && <Clock/>}
+      <BetterClock/>
+      <button onClick={() => setShowClock(false)}>Hide Clock</button>
+
+      <hr/>
+      <MagicBox/>
 
     </div>
   );
